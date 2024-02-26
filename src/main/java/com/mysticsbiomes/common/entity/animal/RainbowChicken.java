@@ -21,9 +21,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.Vec3;
-import org.apache.commons.compress.utils.Lists;
 
 import javax.annotation.Nonnull;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class RainbowChicken extends Chicken {
@@ -67,7 +68,7 @@ public class RainbowChicken extends Chicken {
      * @return what the offspring color will be, either one of the parents color or a combination of both; making a new color.
      */
     private Type getOffspringVariant(RainbowChicken parent1, RainbowChicken parent2) {
-        List<Type> colorTypes = Lists.newArrayList();
+        List<Type> colorTypes = new ArrayList<>();
         colorTypes.add(parent1.getVariant());
         colorTypes.add(parent2.getVariant());
 
